@@ -41,7 +41,7 @@ const MarksEntry = ({ navigation, route }) => {
       else grade = "C";
     }
 
-    navigation.navigate("ResultScreen", {
+    navigation.replace("ResultScreen", {
       name,
       roll,
       total: total.toFixed(1),

@@ -13,8 +13,8 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const showToast = (msg) => {
-      ToastAndroid.show(msg, ToastAndroid.SHORT);
-  };
+  ToastAndroid.show(msg, ToastAndroid.SHORT);
+};
 
 const StudentInfo = ({ navigation }) => {
   const [name, setName] = useState("");
@@ -28,13 +28,13 @@ const StudentInfo = ({ navigation }) => {
       );
       return;
     }
-    else if (name.trim() === ""){
+    else if (name.trim() === "") {
       showToast("Please enter name to proceed!");
-      return;  
+      return;
     }
-    else if (roll.trim() === ""){
+    else if (roll.trim() === "") {
       showToast("Please enter roll number to proceed!");
-      return;  
+      return;
     }
     navigation.navigate("MarksEntry", { name, roll });
     setName("");
@@ -57,10 +57,8 @@ const StudentInfo = ({ navigation }) => {
             />
           </View>
 
-          <Text style={styles.mainTitle}>Portal Login</Text>
-          <Text style={styles.subTitle}>
-            Enter student details to start
-          </Text>
+          <Text style={styles.mainTitle}>Student Information</Text>
+          <Text style={styles.subTitle}>Enter details to proceed to marks entry</Text>
         </View>
 
         <View style={styles.card}>
@@ -147,16 +145,21 @@ const styles = StyleSheet.create({
   },
 
   mainTitle: {
-    fontSize: 28,
-    fontWeight: "bold",
-    color: "#fff",
-    fontWeight : "bold",
+    fontSize: 32,       
+    fontWeight: "900",    
+    color: "#FFFFFF",
+    textAlign: "center",
+    letterSpacing: 0.5,
   },
 
   subTitle: {
-    fontSize: 15,
-    color: "rgba(255, 255, 255, 0.93)",
-    marginTop: 5,
+    fontSize: 14,
+    color: "rgba(255, 255, 255, 0.8)", 
+    marginTop: 8,       
+    textAlign: "center",
+    fontWeight: "500",
+    lineHeight: 20,
+    paddingHorizontal: 20,
   },
 
   card: {
