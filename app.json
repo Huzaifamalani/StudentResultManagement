@@ -1,4 +1,9 @@
 {
   "name": "StudentResultManagement",
-  "displayName": "StudentResultManagement"
+  "displayName": "StudentResultManagement",
+  "extra": {
+    "eas": {
+      "projectId": "69b11d60-d4a3-4e5b-a184-7dcf9d9b82aa"
+    }
+  }
 }

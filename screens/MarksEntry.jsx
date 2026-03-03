@@ -49,6 +49,9 @@ const MarksEntry = ({ navigation, route }) => {
       grade,
       subjects: { math: m, science: s, english: e }
     });
+    setMath("");
+    setScience("");
+    setEnglish("");
   };
 
   return (

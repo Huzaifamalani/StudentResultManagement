@@ -87,7 +87,10 @@ const ResultScreen = ({ route, navigation }) => {
 
           <TouchableOpacity
             style={[styles.button, { backgroundColor: themeColor }]}
-            onPress={() => navigation.goBack()}
+            onPress={() => navigation.reset({
+              index: 0,
+              routes: [{ name: "StudentInfo" }],
+            })}
             activeOpacity={0.8}
           >
             <Text style={styles.buttonText}>CHECK ANOTHER RESULT</Text>

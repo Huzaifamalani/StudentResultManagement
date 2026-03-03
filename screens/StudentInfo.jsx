@@ -37,6 +37,8 @@ const StudentInfo = ({ navigation }) => {
       return;  
     }
     navigation.navigate("MarksEntry", { name, roll });
+    setName("");
+    setRoll("");
   };
 
   return (
